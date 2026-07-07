@@ -2,7 +2,7 @@
 
 # 1. Обновление системы и установка базовых зависимостей из официальных репозиториев
 echo "Установка базовых пакетов..."
-sudo pacman -Syu --noconfirm --needed \
+sudo pacman -Syu --needed \
     niri kitty fastfetch zsh thunar firefox cmake wl-clipboard kdeconnect sddm rust lact \
     git libcanberra ttf-jetbrains-mono noto-fonts-cjk jq xlibre-xserver-common
 
@@ -22,7 +22,7 @@ fi
 
 # 3. Установка пакетов из AUR
 echo "Установка пакетов из AUR (noctalia-shell-git, happ-desktop-bin, vesktop)..."
-paru -S --noconfirm noctalia-shell-git happ-desktop-bin vesktop-bin
+paru -S noctalia-shell-git happ-desktop-bin vesktop-bin
 
 # 4. Установка темы Noctalia для SDDM
 echo "Установка темы Noctalia для SDDM..."
