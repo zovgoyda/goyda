@@ -21,8 +21,8 @@ else
 fi
 
 # 3. Установка пакетов из AUR
-echo "Установка пакетов из AUR (noctalia-shell-git, happ-desktop-bin, vesktop)..."
-paru -S --needed noctalia-shell-git happ-desktop-bin vesktop-bin adw-gtk-theme
+echo "Установка пакетов из AUR"
+paru -S --needed noctalia-shell-git happ-desktop-bin vesktop-bin adw-gtk-theme apple_cursor
 
 # 4. Установка Zsh4Humans
 echo "Установка Zsh4Humans..."
