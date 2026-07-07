@@ -3,8 +3,8 @@
 # 1. Обновление системы и установка базовых зависимостей из официальных репозиториев
 echo "Установка базовых пакетов..."
 sudo pacman -Syu --needed \
-    niri kitty fastfetch zsh thunar firefox cmake wl-clipboard kdeconnect sddm rust lact \
-    git libcanberra ttf-jetbrains-mono noto-fonts-cjk jq xlibre-xserver-common
+    niri kitty fastfetch zsh thunar firefox cmake wl-clipboard kdeconnect sddm rust lact
+    git libcanberra ttf-jetbrains-mono noto-fonts-cjk jq xlibre-xserver-common nwg-look
 
 # 2. Установка paru (AUR-хелпера)
 # Проверяем, установлен ли уже paru, чтобы не тратить время
