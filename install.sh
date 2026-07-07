@@ -24,17 +24,7 @@ fi
 echo "Установка пакетов из AUR (noctalia-shell-git, happ-desktop-bin, vesktop)..."
 paru -S --needed noctalia-shell-git happ-desktop-bin vesktop-bin
 
-# 4. Установка темы Noctalia для SDDM
-echo "Установка темы Noctalia для SDDM..."
-cd /tmp
-git clone https://github.com/mda-dev/noctalia-sddm-theme.git noctalia
-cd noctalia
-# Запуск установщика
-sudo bash ./installer/install.sh
-cd ..
-rm -rf noctalia
-
-# 5. Установка Zsh4Humans
+# 4. Установка Zsh4Humans
 echo "Установка Zsh4Humans..."
 if command -v curl >/dev/null 2>&1; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
