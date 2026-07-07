@@ -22,7 +22,7 @@ fi
 
 # 3. Установка пакетов из AUR
 echo "Установка пакетов из AUR (noctalia-shell-git, happ-desktop-bin, vesktop)..."
-paru -S noctalia-shell-git happ-desktop-bin vesktop-bin
+paru -S --needed noctalia-shell-git happ-desktop-bin vesktop-bin
 
 # 4. Установка темы Noctalia для SDDM
 echo "Установка темы Noctalia для SDDM..."
