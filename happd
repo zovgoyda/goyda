@@ -1,4 +1,4 @@
 type = process
 command = /opt/happ/bin/happd
 depends-on = dhcpcd
-
+# Его в /etc/dinit.d/
