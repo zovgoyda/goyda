@@ -24,4 +24,18 @@ fi
 echo "Установка пакетов из AUR (noctalia-shell-git, happ-desktop-bin, vesktop)..."
 paru -S --noconfirm noctalia-shell-git happ-desktop-bin vesktop
 
+# 4. Установка темы Noctalia для SDDM
+echo "Установка темы Noctalia для SDDM..."
+cd /tmp
+git clone https://github.com/mda-dev/noctalia-sddm-theme.git noctalia
+cd noctalia
+# Запуск установщика
+sudo bash ./installer/install.sh
+cd ..
+rm -rf noctalia
+
+echo "---"
+
 echo "Все готово! Система настроена."
+
+echo "---"
