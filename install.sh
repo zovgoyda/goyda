@@ -4,7 +4,7 @@
 echo "Установка базовых пакетов..."
 sudo pacman -Syu --noconfirm --needed \
     niri kitty fastfetch zsh thunar firefox cmake wl-clipboard kdeconnect sddm rust lact \
-    base-devel git
+    git libcanberra ttf-jetbrains-mono noto-fonts-cjk
 
 # 2. Установка paru (AUR-хелпера)
 # Проверяем, установлен ли уже paru, чтобы не тратить время
