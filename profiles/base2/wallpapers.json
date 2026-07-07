@@ -1,0 +1,9 @@
+{
+  "screens": [
+    {
+      "name": "DP-2",
+      "light": "/home/goyda/SSD/Изображения/123.png",
+      "dark": "/home/goyda/SSD/Изображения/123.png"
+    }
+  ]
+}

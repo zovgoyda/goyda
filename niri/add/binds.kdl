@@ -11,16 +11,14 @@ binds {
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0 && canberra-gtk-play -i audio-volume-change"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05- && canberra-gtk-play -i audio-volume-change"; }
-    Mod+L { spawn "swaylock"; }
+    Mod+L { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
     XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
     XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
     XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
-    //Mod+comma { spawn "anyrun"; }
+    Mod+comma { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
-
-
 
     Mod+O repeat=false { toggle-overview; }
 
@@ -34,8 +32,7 @@ binds {
     //Mod+J     { focus-window-down; }
     Mod+K     { focus-window-up; }
     //Mod+L     { focus-column-right; }
-    Mod+Grave { spawn "wofi"; }  
-    Mod+T { spawn-sh "bash ~/.config/waybar/theme.sh"; }
+    Mod+Grave { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
 
     Mod+Ctrl+Left  { move-column-left; }
     Mod+Ctrl+Down  { move-window-down; }
@@ -151,7 +148,7 @@ binds {
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
     //Mod+W { toggle-column-tabbed-display; }
-    Mod+X { spawn-sh "bash ~/.config/waybar/powermenu.sh"; }
+    Mod+X { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
 
     Home { screenshot; }
     Ctrl+Print { screenshot-screen; }

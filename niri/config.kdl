@@ -55,7 +55,7 @@ layout {
 
     border {
         
-        off
+        //off
 
         width 1
         active-color "#633496"
@@ -113,7 +113,6 @@ include "add/cursor.kdl"
 include "add/outputs.kdl"
 include "add/windowrules.kdl"
 include "add/autostart.kdl"
-include "add/colors.kdl"
 
 
 
@@ -121,5 +120,5 @@ include "add/colors.kdl"
 
 
 
-
+include "./noctalia.kdl"
 

@@ -4,30 +4,10 @@ window-rule {
 	}
 
 
-window-rule {
-	    match app-id="org.pulseaudio.pavucontrol"
-	        
-	        open-floating true
-		    max-width 800
-		    max-height 800
-		    default-floating-position x=2550 y=20
-		  	    }
-
-
-	    layer-rule {
-		        match namespace="^wofi$"
-			    geometry-corner-radius 20
-			      			}
-
-
-
 // @id=wr_1776947182587145867 @name=kitty
 window-rule {
     match app-id="^kitty$"
     opacity 0.98
-    background-effect {
-	    blur true
-	   }
 }
 
 
@@ -114,31 +94,18 @@ window-rule {
 }
 
 
+
 window-rule {
     geometry-corner-radius 10
     clip-to-geometry true
 }
+overview {
+    // Цвет самого дальнего заднего плана в overview (вокруг воркспейсов)
+    backdrop-color "#1a1b26" 
+}
 
-
-
-
-
-
-
-layer-rule {
-	    match namespace="^waybar$"
-	        geometry-corner-radius 12
-		   
-	
-
-				}
-
-				layer-rule {
-					    match namespace="^wofi$"
-					        geometry-corner-radius 20
-						
-					                               }	    
-					
-								      
-
+layout {
+    // Цвет подложки самих рабочих столов (тот самый серый цвет на вашем скриншоте)
+    background-color "#1f2335" 
+}
 
