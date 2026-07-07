@@ -1,0 +1,11 @@
+overview {
+    backdrop-color "#090d17"
+}
+
+layout {
+    background-color "#090d17"
+    focus-ring {
+        active-color "#578CBA"
+        inactive-color "#595d6d"
+    }
+}
