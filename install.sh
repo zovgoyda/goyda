@@ -34,6 +34,14 @@ sudo bash ./installer/install.sh
 cd ..
 rm -rf noctalia
 
+# 5. Установка Zsh4Humans
+echo "Установка Zsh4Humans..."
+if command -v curl >/dev/null 2>&1; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
+else
+    sh -c "$(wget -O- https://raw.githubusercontent.com/romkatv/zsh4humans/v5/install)"
+fi
+
 echo "---"
 
 echo "Все готово! Система настроена."
