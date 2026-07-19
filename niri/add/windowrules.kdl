@@ -100,12 +100,10 @@ window-rule {
     clip-to-geometry true
 }
 overview {
-    // Цвет самого дальнего заднего плана в overview (вокруг воркспейсов)
     backdrop-color "#1a1b26" 
 }
 
 layout {
-    // Цвет подложки самих рабочих столов (тот самый серый цвет на вашем скриншоте)
     background-color "#1f2335" 
 }
 
