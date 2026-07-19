@@ -2,11 +2,9 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+W { spawn "firefox"; }
     Alt+R hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+D hotkey-overlay-title="Run an Application: anyrun" { spawn "anyrun"; }
-    Mod+V { spawn "~/.local/bin/cliphist-fuzzel-img"; }
+    Mod+Escape { spawn "kitty -e btop"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Super+E { spawn "thunar"; }
-    Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0 && canberra-gtk-play -i audio-volume-change"; }
@@ -154,7 +152,7 @@ binds {
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    //Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
