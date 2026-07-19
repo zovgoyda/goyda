@@ -1,2 +1,2 @@
-# goydashell
+# goyda
 GOYDA
