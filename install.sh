@@ -2,7 +2,7 @@
 
 # 1. Обновление системы и установка базовых зависимостей из официальных репозиториев
 echo "Установка базовых пакетов..."
-sudo pacman -Syu --needed niri kitty fastfetch zsh thunar firefox cmake wl-clipboard kdeconnect sddm sddm-dinit rust lact lact-dinit git libcanberra ttf-jetbrains-mono noto-fonts-cjk jq xlibre-xserver-common nwg-look turnstile-dinit dbus-dinit pipewire-dinit pipewire-pulse-dinit wireplumber-dinit feh mpv glew xwayland-satellite
+sudo pacman -Syu --needed niri kitty fastfetch zsh thunar firefox cmake wl-clipboard kdeconnect sddm sddm-dinit xdg-desktop-portal-gnome rust lact lact-dinit git libcanberra ttf-jetbrains-mono noto-fonts-cjk jq xlibre-xserver-common nwg-look turnstile-dinit dbus-dinit pipewire-dinit pipewire-pulse-dinit wireplumber-dinit feh glu mpv glew xwayland-satellite
 
 # 2. Установка paru (AUR-хелпера)
 # Проверяем, установлен ли уже paru, чтобы не тратить время
@@ -20,7 +20,7 @@ fi
 
 # 3. Установка пакетов из AUR
 echo "Установка пакетов из AUR"
-paru -S --needed noctalia-shell-git happ-desktop-bin vesktop-bin adw-gtk-theme apple_cursor
+paru -S --needed noctalia-shell-git happ-desktop-bin vesktop-bin adw-gtk-theme apple_cursor cliphist
 
 # 4. Установка Zsh4Humans
 echo "Установка Zsh4Humans..."
