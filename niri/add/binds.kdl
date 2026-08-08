@@ -2,19 +2,21 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+W { spawn "firefox"; }
     Alt+R hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+Escape { spawn "kitty -e btop"; }
+    Mod+D hotkey-overlay-title="Run an Application: anyrun" { spawn "anyrun"; }
+    Mod+V { spawn "~/.local/bin/cliphist-fuzzel-img"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Super+E { spawn "thunar"; }
+    Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0 && canberra-gtk-play -i audio-volume-change"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05- && canberra-gtk-play -i audio-volume-change"; }
-    Mod+L { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
+    Mod+L { spawn-sh "noctalia msg session lock"; }
     XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
     XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
     XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
     XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
-    Mod+comma { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings" "toggle"; }
+    Mod+comma { spawn-sh "noctalia msg settings-toggle"; }
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
@@ -30,7 +32,7 @@ binds {
     //Mod+J     { focus-window-down; }
     Mod+K     { focus-window-up; }
     //Mod+L     { focus-column-right; }
-    Mod+Grave { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+    Mod+Grave { spawn-sh "noctalia msg panel-toggle launcher"; }
 
     Mod+Ctrl+Left  { move-column-left; }
     Mod+Ctrl+Down  { move-window-down; }
@@ -146,13 +148,13 @@ binds {
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
     //Mod+W { toggle-column-tabbed-display; }
-    Mod+X { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
+    Mod+X { spawn-sh "noctalia msg panel-toggle session"; }
 
     Home { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
-    //Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }

@@ -7,7 +7,11 @@ window-rule {
 // @id=wr_1776947182587145867 @name=kitty
 window-rule {
     match app-id="^kitty$"
-    opacity 0.98
+   // opacity 0.90
+       background-effect {
+        blur true
+        xray true
+    }
 }
 
 
@@ -48,6 +52,18 @@ window-rule {
     max-width 1280
     max-height 720
 }
+
+window-rule {
+    match app-id="^thunar$"
+    opacity 0.70
+       background-effect {
+        blur true
+        xray true
+    }
+}
+
+
+
 
 // @id=wr_1776958411612789879 @name=org.qbittorrent.qBittorrent
 window-rule {
@@ -96,14 +112,24 @@ window-rule {
 
 
 window-rule {
-    geometry-corner-radius 10
+    geometry-corner-radius 20
     clip-to-geometry true
 }
 overview {
+    // Цвет самого дальнего заднего плана в overview (вокруг воркспейсов)
     backdrop-color "#1a1b26" 
 }
 
 layout {
+    // Цвет подложки самих рабочих столов (тот самый серый цвет на вашем скриншоте)
     background-color "#1f2335" 
 }
+
+window-rule {
+  match app-id="dev.noctalia.Noctalia"
+  open-floating true
+  default-column-width { fixed 1080; }
+  default-window-height { fixed 920; }
+}
+
 
