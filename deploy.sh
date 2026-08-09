@@ -26,7 +26,7 @@ for item in "${folders[@]}"; do
     fi
 
     ln -s "$src_path" "$dest_path"
-    echo "Создана ссылка: $dest_path -> $src_path"
+    echo "Создан симлинк: $dest_path -> $src_path"
 done
 
-echo "Готово! Все конфиги подключены."
+echo "Готово."
