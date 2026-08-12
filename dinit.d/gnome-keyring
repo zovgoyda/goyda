@@ -1,0 +1,4 @@
+type = process
+command = /usr/bin/gnome-keyring-daemon --start --foreground --components=pkcs11,secrets,ssh
+depends-on = dbus
+restart = true
