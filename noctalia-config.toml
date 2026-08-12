@@ -1,0 +1,426 @@
+[audio]
+enable_sounds = true
+sound_volume = 0.0
+
+[bar.default]
+end = [
+    "media",
+    "tray",
+    "notifications",
+    "clipboard",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "control-center",
+    "session",
+    "keyboard_layout",
+    "bar",
+    "w-engine-widget"
+]
+start = [ "launcher", "wallpaper", "workspaces", "cpu" ]
+
+[config]
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[desktop_widgets]
+schema_version = 2
+widget_order = [
+    "desktop-widget-0000000000000008",
+    "desktop-widget-0000000000000001",
+    "desktop-widget-0000000000000002",
+    "desktop-widget-0000000000000003",
+    "desktop-widget-0000000000000004",
+    "desktop-widget-0000000000000005",
+    "desktop-widget-0000000000000006",
+    "desktop-widget-0000000000000007",
+    "desktop-widget-0000000000000009"
+]
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 288.0
+    box_width = 416.0
+    cx = 1720.0
+    cy = 384.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = false
+
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    box_height = 128.0
+    box_width = 256.0
+    cx = 248.0
+    cy = 352.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "weather"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
+        background = false
+
+    [desktop_widgets.widget.desktop-widget-0000000000000003]
+    box_height = 80.0
+    box_width = 96.0
+    cx = 3112.0
+    cy = 120.0
+    output = "DP-1"
+    rotation = -0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
+        background = false
+        display = "gauge"
+        stat = "cpu_usage"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000004]
+    box_height = 80.0
+    box_width = 96.0
+    cx = 3240.0
+    cy = 120.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
+        background = false
+        display = "gauge"
+        gauge_layout = "horizontal"
+        stat = "cpu_temp"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000005]
+    box_height = 64.0
+    box_width = 96.0
+    cx = 3240.0
+    cy = 176.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000005.settings]
+        background = false
+        display = "gauge"
+        stat = "gpu_temp"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000006]
+    box_height = 48.0
+    box_width = 96.0
+    cx = 3112.0
+    cy = 176.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000006.settings]
+        background = false
+        display = "gauge"
+        stat = "gpu_usage"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000007]
+    box_height = 48.0
+    box_width = 192.0
+    cx = 3176.0
+    cy = 232.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000007.settings]
+        background = false
+        display = "gauge"
+        stat = "ram_pct"
+        stat2 = "cpu_temp"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000008]
+    box_height = 256.0
+    box_width = 272.0
+    cx = 3176.0
+    cy = 176.0
+    output = "DP-1"
+    rotation = -0.0
+    type = "label"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000008.settings]
+        opacity = 1.0
+        title = ""
+
+    [desktop_widgets.widget.desktop-widget-0000000000000009]
+    box_height = 48.0
+    box_width = 192.0
+    cx = 3176.0
+    cy = 80.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "label"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000009.settings]
+        background = false
+        color = "primary"
+        font_family = "FreeSans"
+        opacity = 1.0
+        title = "Системный монитор"
+
+[hooks]
+wallpaper_changed = "/usr/share/sddm/themes/noctalia/sync-shell-wallpaper.sh"
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@HDMI-A-2",
+    "lockscreen-login-box@HDMI-A-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-login-box@DP-1",
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-widget-0000000000000003"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 196.0
+    box_width = 720.0
+    cx = 1720.0
+    cy = 1321.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-2"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "HDMI-A-2"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-2".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 272.0
+    box_width = 432.0
+    cx = 1720.0
+    cy = 384.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
+        clock_style = "digital"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 128.0
+    box_width = 352.0
+    cx = 1544.0
+    cy = 1104.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "weather"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background = false
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 128.0
+    box_width = 352.0
+    cx = 1896.0
+    cy = 1104.0
+    output = "DP-1"
+    rotation = 0.0
+    type = "media_player"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        background = false
+
+[notification]
+layer = "overlay"
+
+[plugins]
+enabled = [ "hy4ri/ds4-color", "icefish/phone-connect", "avivbintangaringga/nextboot-selector", "tadomika_ari/w-engine" ]
+
+[shell]
+avatar_path = "/home/goyda/SSD/Изображения/the-russian-revolutionary-vladimir-lenin-and-his-cat-1921-v0-0pou9k6bjlqz.jpg"
+clipboard_auto_paste = "off"
+password_style = "random"
+polkit_agent = true
+
+    [shell.greeter_sync]
+    auto_sync = true
+
+    [shell.panel]
+    session_placement = "floating"
+    session_position = "center"
+    transparency_mode = "glass"
+
+    [shell.screen_corners]
+    enabled = true
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "1"
+    variant = "destructive"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 0.0
+    enabled = false
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "4"
+    variant = "default"
+
+[templates.sddm]
+input_path = "/usr/share/sddm/themes/noctalia/theme.template.conf"
+output_path = "/usr/share/sddm/themes/noctalia/theme.conf"
+
+[theme]
+community_palette = "Oxocarbon"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "faithful"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "cava", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty", "niri", "qt" ]
+    community_ids = [
+        "pywalfox",
+        "pywalfox-beta4",
+        "discord",
+        "libreoffice",
+        "neovim",
+        "vscode",
+        "steam",
+        "fuzzel",
+        "hyprtoolkit",
+        "yazi"
+    ]
+
+[wallpaper]
+directory = "/home/goyda/SSD/wallpapers"
+transition = []
+
+    [wallpaper.default]
+    path = "/home/goyda/SSD/wallpapers/i.webp"
+
+    [wallpaper.last]
+    path = "/home/goyda/.local/share/Steam/steamapps/workshop/content/431960/2453328269/preview.jpg"
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/goyda/.local/share/Steam/steamapps/workshop/content/431960/2453328269/preview.jpg"
+
+    [wallpaper.monitors.HDMI-A-1]
+    path = "/home/goyda/SSD/wallpapers/i.webp"
+
+    [wallpaper.monitors.HDMI-A-2]
+    path = "/home/goyda/.local/share/Steam/steamapps/workshop/content/431960/3603712208/preview.gif"
+
+[widget.bar]
+type = "icefish/phone-connect:bar"
+
+[widget.w-engine-widget]
+type = "tadomika_ari/w-engine:w-engine-widget"
